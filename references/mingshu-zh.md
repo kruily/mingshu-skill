@@ -1,0 +1,519 @@
+# 命书 / Book of Life Transformation
+
+⚠️ 本内容基于《改运奇书》小说中的命书，仅供娱乐参考，不构成任何专业建议。| This content is based on the 命书 from the novel《改运奇书》, for entertainment reference only.
+
+---
+
+## 易命第一术
+
+**原文：** 洒扫庭除，使身不近秽；肃洁仪容，使秽不附身。勿卧于污秽熏天、杂然无序之所，勿寝于阴暗潮湿之地。
+
+**白话解读：** 打扫卫生，洗净自己。别睡在垃圾堆里，别睡在阴暗潮湿的地方。
+
+**English Translation:** Keep your surroundings clean and your body well-groomed. Don't sleep in garbage dumps or damp, dark places. A clean environment attracts positive energy.
+
+**Category:** 环境健康 (Environment & Health)
+
+---
+
+## 易命第二术
+
+**原文：** 应时而兴，应时而食，应时而作，应时而息。四时有序，心神乃一。
+
+**白话解读：** 该起床时起床，该吃饭时吃饭，该工作时工作，该睡觉时睡觉，不要打乱生活的节奏。
+
+**English Translation:** Rise when it's time to rise, eat when it's time to eat, work when it's time to work, rest when it's time to rest. Maintaining a orderly rhythm brings inner peace and clarity.
+
+**Category:** 环境健康 (Environment & Health)
+
+---
+
+## 易命第三术
+
+**原文：** 言讷而实，语善而真。不泄恶语，不传妄言，不涉谤讥。君子之运，发于唇齿。
+
+**白话解读：** 说话要诚实，要说善意真实的话。不口出恶言伤害别人，不传播虚假的言论，更不参与毁谤和讥讽。一个人的好运，是从他怎么说话开始的。
+
+**English Translation:** Speak with honesty and kindness. Don't speak hurtfully, spread lies, or engage in slander and mockery. A gentleman's fortune begins with how he speaks.
+
+**Category:** 言行修养 (Speech & Conduct)
+
+---
+
+## 易命第四术
+
+**原文：** 以见利之明处世，财可求也。以侵害之心得财，悖逆天道，必遭反报：非数倍偿债，即气运消减，身心俱伤。
+
+**白话解读：** 只要眼光敏锐、洞察先机，财富是可以追求的。通过侵害别人的利益来获得财富，是违背天道的，必然会遭到反噬和报应。
+
+**English Translation:** Wealth can be pursued through sharp discernment of opportunities. But gaining wealth through harming others defies cosmic order and will bring retribution: either manifold debts or diminished fortune and harm to body and spirit.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第五术
+
+**原文：** 旧过过，未未到。事有先后，逐一面之，戒之在贪。
+
+**白话解读：** 过往的失败和错误，已经发生、无法改变，就不要再为此恐惧和内耗，不要过分焦虑和瞎想。当下最重要的，是看清眼前的问题、分清主次，集中精力一个一个解决，不能贪多、不能冒进。
+
+**English Translation:** Past mistakes are done and cannot be changed. Stop dwelling on them. Face each task before you one at a time, prioritizing what matters most. Beware of greed and haste.
+
+**Category:** 言行修养 (Speech & Conduct)
+
+---
+
+## 易命第六术（其一）
+
+**原文：** 天时至，气运生，体察而顺应之。若能与道偕行，则如水行舟，无往不利。
+
+**白话解读：** 天时已到、运气来了，要感觉到运气的存在，顺势而为。如果能符合"道"的规律，就会一帆风顺，做什么都顺利。
+
+**English Translation:** When the moment arrives and fortune stirs, sense it and go with the flow. When you act in harmony with the Dao, it's like sailing with the wind: nothing can stop you.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第六术（其二）
+
+**原文：** 今人多趋捷径，然未察其径塞途拥，而康庄之衢，阒其无人。若行事觉轻安自得者，此即汝之坦途也。
+
+**白话解读：** 今天的人们大多喜欢走捷径，但所谓捷径因走的人太多，早已拥挤堵塞；反而宽阔平坦的康庄大道，空空荡荡没什么人走。如果做一件事时感觉特别轻松、享受、得心应手，这件事就是属于你的康庄大道。
+
+**English Translation:** Most people chase shortcuts without realizing these paths are jammed with travelers, while the broad, smooth road lies empty. If something feels effortless and natural to you, that's your true path.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第七术
+
+**原文：** 不贪者，贪之上境也。
+
+**白话解读：** 不贪，才是贪婪的最高境界。
+
+**English Translation:** Not being greedy is the highest form of restraint.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第八术
+
+**原文：** 业之道，旧业勿轻弃。虽利薄，然根基之所系，存身之本也。若新业既成，根基稳固，方可择之而从。若二者得兼，善之善者也。
+
+**白话解读：** 在新的事业没有成功稳定之前，千万不要轻易丢掉旧的事业。哪怕它利润微薄，也是你赖以生存的根本。等到新的事业做成、根基稳了，才可以有所选择。如果两样都能兼顾，就是最好中的最好。
+
+**English Translation:** Never abandon your old venture prematurely. Even if profits are thin, it's your foundation and means of survival. Only after your new venture is stable should you consider switching. Having both is ideal.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第九术
+
+**原文：** 初遇生人，若生厌憎，心神不安，速避之。见使君怡然者，可近而交，然须慎察其行。必试其信义，此乃立世之本。
+
+**白话解读：** 第一次见到陌生人，如果本能地感到讨厌、不舒服，就要赶紧远离。如果见到对方让你觉得很放松、舒服，可以接近交往，但必须谨慎观察他的行为。一定要测试他的信用，因为这是立身处世的根本。如果发现对方信用不好，要像躲避刀箭一样立刻躲开。
+
+**English Translation:** When meeting strangers, if you feel instant dislike or discomfort, stay away. If someone puts you at ease, you may approach, but watch their actions carefully. Test their trustworthiness—this is the foundation of navigating the world. Retreat immediately if they prove dishonest.
+
+**Category:** 人际之道 (Interpersonal)
+
+---
+
+## 易命第十术
+
+**原文：** 父母者，天授贵人也；困厄中施以援手者，贵人也；指迷津于惘途者，贵人也；甘苦与共之友，贵人也；生死相托之夫妻，互为贵人也。然贵人非固守一世，乃如云水流转不息。当明眸察周遭之贵气，承其瑞意，则如握机缘之枢机。
+
+**白话解读：** 父母是上天赐予的贵人；困境中伸出援手的人是贵人；在迷茫中为你指路的人是贵人；同甘共苦的朋友是贵人；生死相托的夫妻互为贵人。但贵人不是一辈子固定不变的，像流水一样流转不息。要用心发现身边的贵人，承接他们带来的祥瑞之意，这才是抓住机会的关键。
+
+**English Translation:** Parents are heaven-sent benefactors; so are those who help in hardship, guide you through confusion, share joy and sorrow, or entrust their lives to you. But benefactors don't remain fixed—they flow like clouds and water. Recognize the blessings around you and embrace them to seize opportunity.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第十一术
+
+**原文：** 吾观处世之道，事未成勿泄于未预者，利既获勿宣于不知者。倘炫其功，恐招非议而损其益。
+
+**白话解读：** 在事情没有成功之前，不要告诉没有参与这件事的任何人。在获得了巨大的利益之后，不要向不知道这件事的人宣扬。如果到处炫耀自己的功劳和成就，恐怕会招来不必要的注意、非议和麻烦，从而损害自己已经获得的利益。
+
+**English Translation:** Keep your unfinished plans private from outsiders and your gains unknown to the uninformed. Bragging about achievements invites unwanted attention and trouble that could diminish your benefits.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第十二术
+
+**原文：** 凡所当为之事，必竭诚以赴，务尽其能。
+
+**白话解读：** 要做的事情，就必须拿出百分之百的诚意和心力，竭尽自己全部的才能去做。如果心里想着投机取巧，或者产生了懒惰懈怠的念头，只是为了完成任务而敷衍了事，那还不如干脆停下来不要去做。因为草率完成的事情，很可能会招来意想不到的灾祸，留下无穷的后患，最终还会损害到自身的运气。所以，懂得在什么时候停下来、什么事不能做，同样是一种明智的处世之道。
+
+**English Translation:** Give your full dedication and ability to whatever must be done. Half-hearted effort or laziness leads to careless results that invite disaster and harm your fortune. Knowing when to stop is equally wise.
+
+**Category:** 言行修养 (Speech & Conduct)
+
+---
+
+## 易命第十三术
+
+**原文：** 识人者，当涤尽浮光，弃置衔冕，略其形骸，屏绝人议。惟观其言行之微，察其举止之细，则彼若素缣一卷，自将仁善鄙诈，贞邪曲直，书而示汝矣。
+
+**白话解读：** 想要真正看清一个人，就必须先洗掉他身上所有的光环，抛开世俗给他的头衔和地位，忽略他的外貌长相，更不能听信旁人对他的任何评价。唯一要做的，就是观察他言语和行为中最微小的细节，从那些不经意的举动中去了解他的本性。这样一来，这个人就会像一卷铺开的白绢，他自己会亲手在上面写下他是仁慈还是善良，是卑鄙还是狡诈，是忠贞还是奸邪，是坦荡还是扭曲。一切的本质，都会在细节中呈现给你。
+
+**English Translation:** To truly understand someone, strip away their glamour, titles, status, appearance, and others' opinions. Observe the smallest details of their words and actions. Like an unrolled white silk scroll, they will reveal themselves—whether kind or cunning, loyal or deceitful, upright or crooked.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第十四术
+
+**原文：** 御人当以疑始，必待其事毕。绳可束其身，岂能羁其志？人为灵长，旦暮异焉，唯以疑目察之，乃见其纤隐之变。
+
+**白话解读：** 用一个人，或者说跟人合作办事，从一开始就要抱着怀疑的态度，并且这种怀疑要一直持续到事情彻底结束。用绳子可以捆住一个人的身体，但怎么能拴住他的思想和意志？人是万物之灵，想法瞬息万变，早上和晚上的想法都可能不一样。只有时刻用怀疑的眼光去观察他，才能发现那些微小的、或者被他刻意隐藏起来的变化。
+
+**English Translation:** Approach partnerships with suspicion from the start until completion. You can bind someone's body but not their mind. People are ever-changing—only constant vigilance reveals subtle shifts they've hidden.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第十五术
+
+**原文：** 判事之成否，其下者取利，其次者取鉴，其至者观乎气运之蓄。
+
+**白话解读：** 判断一件事是成功还是失败，有三个层次的标准：最低级的标准，是看有没有得到利益、赚到钱、得到实在的好处；比"取利"高一个层次的，是"取鉴"，判断成败不只看眼前得失，更要看有没有从中吸取教训、获得宝贵经验；最顶级的标准，是观察这件事是否为自己积累了"气运"。金钱可能会花光，经验可能会过时，但"气运"一旦积蓄起来，能影响一个人长远的走向。
+
+**English Translation:** Judging success has three levels: the lowest judges by profit, the middle by lessons learned, and the highest by whether you've accumulated fortune. Money can be spent, experience can become obsolete, but accumulated fortune shapes your long-term trajectory.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第十六术
+
+**原文：** 交游之众，当分三等：其一唯利是图，毋涉情义；其二唯情是守，毋涉利欲；此二者不可逾，逾则必遭其咎。其三情利皆可谋。得此辈愈众，则气运愈昌。
+
+**白话解读：** 围绕在一个人身边的人，可以清晰地划分为三种类型：第一种，是纯粹的利益交换关系。和这类人打交道，只能谈利益，绝不能牵扯感情；第二种，是纯粹的感情维系关系。和这类人交往，只能讲情分，绝不能掺杂利益。这两种关系的界限是绝对的，不容许任何形式的跨越。一旦越界，谈利益的开始谈感情，或者谈感情的开始谈利益，那么最后的结果必然是受到伤害或遭受损失；第三种，则是最高级的关系。这种人，既可以坦荡地谈论利益，又可以真诚地交流感情。利益的合作不会损害他们的情分，感情的深厚又能促进利益的共赢。如果一个人身边能聚集越来越多的这种人，那么他的气运就会越来越昌盛。
+
+**English Translation:** People around you fall into three categories: those who only want profit (keep emotions out), those who only value feelings (keep money out), and never cross these boundaries. The third type combines both naturally. The more such people you gather, the more your fortune grows.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第十七术
+
+**原文：** 方时运至际，万象皆佐。所当为者，惟体察而顺应之，乘势而起。然骄矜造作，挥霍无度，实悖逆福运。慎之。
+
+**白话解读：** 当好运来临的时候，周围的一切事物都会成为你的助力。你要做的，就是仔细地体会、观察，并且顺应这种趋势，借助这股强大的势头发展起来。但是，如果因此变得骄傲自大、故作姿态，或者奢侈浪费、毫无节制，这些行为实际上是和好运背道而驰的，是会把气运推开的。千万要谨慎对待。
+
+**English Translation:** When fortune arrives, all things align in your favor. Sense and ride the wave. But arrogance, posturing, or waste repel good fortune. Stay vigilant.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第十八术
+
+**原文：** 共事欲成，首在谋宜而见远，次在尽其才，至要者忘私。三者备，则事可成其八九。余者，顺天时而已。
+
+**白话解读：** 一起合作干一件事，想要成功，首先要有周全的计划和长远的眼光。其次，所有参与者都要竭尽全力，发挥自己的才能。最重要的一点是，所有人都要忘记私心。如果这三点都具备了，那么这件事就已经成功了八九成。剩下的一两成，就看天意了。
+
+**English Translation:** For joint endeavors to succeed: plan thoroughly with vision, give your all, and most importantly, forget self-interest. With these three, you'll achieve eight or nine times out of ten. The rest is heavenly will.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第十九术
+
+**原文：** 观一人，细察之，见其品性端良，乃欲与之交。可试询其隐衷，若其诚言不讳，则证其心已视尔为友矣。
+
+**白话解读：** 如果你观察一个人，觉得他品行不错，想跟他交朋友。那么，你可以试着问一些他比较私密的事情，作为一种试探。如果他坦诚地告诉你，没有隐瞒，那就证明，他心里也已经把你当成可以信赖的朋友了。
+
+**English Translation:** If someone seems worthy of friendship, test them by asking something personal. If they answer openly without evasion, they've accepted you as a true friend.
+
+**Category:** 人际之道 (Interpersonal)
+
+---
+
+## 易命第二十术
+
+**原文：** 逢困厄而能自疏者，有福之人也；临险阻犹可坦然而笑者，具大运之相也。
+
+**白话解读：** 遇到困难和窘境，能够自己找到排解和疏通方式的人，是有福气的人。而面临极大的危险和阻碍时，还能谈笑风生、从容面对的人，那更是身具大运气的人。
+
+**English Translation:** Those who can find ways to relieve their distress are fortunate. Those who can still laugh when facing danger have the signs of great luck.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第二十一术
+
+**原文：** 众悦者，气运亨也，然险亦伏于侧矣。
+
+**白话解读：** 被很多人喜欢，说明气运旺盛，是好事。但是，危险也同样潜伏在你的身边。
+
+**English Translation:** Being loved by many indicates strong fortune, but danger also lurks nearby.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第二十二术
+
+**原文：** 夫妇之道，首以信为万事之基，次则消弭龃龉，复可截长补短，尤贵同心以御外。如此，则贵人之气可臻其极，偕老之道得以久长。
+
+**白话解读：** 夫妻之间相处的法则：第一条，也是最根本的一条，是信任。信任是所有一切的基础；第二条，是要能化解矛盾，不能让小摩擦变成大问题；第三条，是取长补短，互相弥补对方的不足；而最可贵、最重要的一条，是"同心以御外"，两个人要齐心协力，一致对外。如果能做到这几点，所谓的"贵人之气"才能达到顶峰，两个人才能白头偕老、长长久久。
+
+**English Translation:** Marriage: trust is the foundation, resolve disagreements, complement each other's weaknesses, and unite against outside challenges. When both partners commit fully, the blessing of benefactors reaches its peak and the marriage endures.
+
+**Category:** 人际之道 (Interpersonal)
+
+---
+
+## 易命第二十三术
+
+**原文：** 勿以交贵者为荣，勿假其名以自壮。若此，是转时运于人，而己之气数益损矣。
+
+**白话解读：** 不要因为结交了地位尊贵、有权有势的人就感到荣耀，更不要借用他们的名号来抬高自己、炫耀自己。如果这样做了，就等于是把自己的时运转移给了别人，而自身的福气、气数反而会因此受到损害。
+
+**English Translation:** Don't pride yourself on knowing the powerful, and don't use their names to boost yourself. Doing so transfers your fortune to others and diminishes your own blessing.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第二十四术
+
+**原文：** 欲得言谈之真味，必以平等相对。至亲犹然。倘彼执守尊卑之见，则所对无非虚文俗套耳。
+
+**白话解读：** 想要在交谈中获得真正有价值、有味道的东西，就必须用平等的姿态去对待对方。哪怕是和最亲近的人之间，也是这个道理。如果其中一方抱着长辈对晚辈、上级对下属那种尊卑有序的观念不放，那么两个人之间的对话，就只会剩下些虚伪的客套话和场面话。
+
+**English Translation:** True conversation requires equality, even with close family. If one party insists on hierarchy, the dialogue becomes nothing but hollow pleasantries.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第二十五术
+
+**原文：** 出资市金，逐盐铁之利者，如博戏，肇端当有尽付一掷之志。所谓必成者，诈也。至若合营之事，尤为险途。
+
+**白话解读：** 投资赚钱，追逐利润，跟赌博没两样。从一开始，就得做好血本无归的准备。那些拍着胸脯打包票，说百分百能成的，有一个算一个，全是骗子。尤其是合伙做投资，更是险中之险。
+
+**English Translation:** Investing for profit is like gambling—be prepared to lose everything from the start. Anyone promising guaranteed returns is a liar. Partnerships are especially treacherous.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第二十六术
+
+**原文：** 善用财者，不啻重于善牟利者也。不擅牟利，乞食而已；苟不谙用财之道，或致身困，乃至罹祸倾覆。
+
+**白话解读：** 善于运用财富，其重要性绝不亚于善于谋取利益。不擅长赚钱，最差的结果无非就是饿肚子，当个乞丐（也可以理解为，你只要肯出力，不至于饿死）。可如果不懂得怎么花钱、怎么运用财富，就可能会让自己陷入困境，甚至招来灾祸，家毁人亡。
+
+**English Translation:** Knowing how to manage wealth matters as much as earning it. Poor earners might beg, but those who don't understand financial management can face ruin and disaster.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第二十七术
+
+**原文：** 勿强求险巇之事以耽危殆之娱，如此则大伤气运。向者无恙，惟气运未尽耳。
+
+**白话解读：** 不要去追求那些危险艰难的事情，沉溺于危险刺激的娱乐，这样会严重损伤你的气运。过去之所以没事，只是因为你的气运还没有耗尽罢了。
+
+**English Translation:** Don't chase dangerous ventures or thrill-seeking entertainment—they severely damage your fortune. Past safety was just luck waiting to run out.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第二十八术
+
+**原文：** 勿自贻伊威，凡桎梏皆厄气运。外锢虽不可御，内心毋复筑樊牢。
+
+**白话解读：** 不要自己给自己戴上枷锁，凡是束缚都会损害你的运势。外在的束缚或许无法抗拒，但内心就不要再给自己修筑牢笼了。
+
+**English Translation:** Don't put chains on yourself—any bondage harms your fortune. External constraints may be unavoidable, but don't build internal prisons.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第二十九术
+
+**原文：** 鉴物犹鉴人，辨其质，可赏而勿溺；溺则神气为所夺。
+
+**白话解读：** 看东西，就跟看人一样，得看透它的本质。可以欣赏，但别被它所迷。一旦沉迷，自己的精气神，甚至运气都会被这玩意儿吸走。
+
+**English Translation:** Viewing objects is like judging people—see their true nature. Appreciate but don't obsession. Obsession drains your vitality and luck.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第三十术
+
+**原文：** 用度可奢，然绝不可费。费者，若财货食粮；究其本，费运气也。
+
+**白话解读：** 生活上可以花钱享受，但绝对不能浪费。浪费掉的，表面看是钱、是东西，但根子上，浪费的是自己的运气。
+
+**English Translation:** You can spend generously on life, but never waste. What's wasted isn't just money or things—it's your fortune itself.
+
+**Category:** 人际之道 (Interpersonal)
+
+---
+
+## 易命第三十一术
+
+**原文：** 勿急，心躁易失。盖急与运之频不相合也。
+
+**白话解读：** 别急。急躁容易出错，容易破财。急的节奏，跟运气的节奏犯冲。
+
+**English Translation:** Don't rush. Haste causes mistakes and losses. Impatience clashes with fortune's rhythm.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第三十二术
+
+**原文：** 勿占人财利之便，占其便则遗运于人；不患人取财利之便，取其便则遗运于己。
+
+**白话解读：** 别去占他人钱财上的便宜，占了，就会把自己的好运分给他人。别怕他人占你钱财上的便宜，他人占了，就会把好运留给你。
+
+**English Translation:** Don't take advantage of others' wealth—if you do, you give away your luck. Don't fear others taking advantage of you—when they do, they leave their luck behind.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第三十三术
+
+**原文：** 必费己财；未入囊者，非己有也。若不得已而假人之财，须报之以利。慎勿假占不偿，恐运尽而祸至。
+
+**白话解读：** 花钱，得花自己的。没装进口袋的钱，不算你的。万不得已借了别人的，得给利息。赖着不还？会把运气耗光，灾祸就来了。
+
+**English Translation:** Spend your own money. What's not in your pocket isn't yours. If you must borrow, repay with interest. Defaulting drains your luck and invites disaster.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第三十四术
+
+**原文：** 怒则智散，亦损气数。
+
+**白话解读：** 人一发火，脑子就不转了，怒气也伤了气运。
+
+**English Translation:** Anger scatters wisdom and damages fortune.
+
+**Category:** 财富之道 (Wealth)
+
+---
+
+## 易命第三十五术
+
+**原文：** 遇不可解之事，避而俟之，或乃上策；强为之者，多反受其咎。
+
+**白话解读：** 遇到解决不了的事，躲开、等着，也许才是最好的办法。硬碰硬，反而会更糟。
+
+**English Translation:** When facing the unsolvable, avoidance and patience are often the best strategy. Forcing through usually backfires.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第三十六术
+
+**原文：** 正对内惧，乃得天眷。
+
+**白话解读：** 直面内心的恐惧，才能得到上天的眷顾。
+
+**English Translation:** Only by facing your inner fears can you receive heaven's favor.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第三十七术
+
+**原文：** 勿自怜，时运亦厌之。
+
+**白话解读：** 别自己可怜自己，好运气最膈应的就是这种人。
+
+**English Translation:** Don't pity yourself—fortune despises such people.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第三十八术
+
+**原文：** 坠于深壑；偃卧无为，常也；百计图出，乃大运之兆。
+
+**白话解读：** 掉进深坑里，躺平闭眼等死，那是常态。想尽一切办法往上爬，连滚带爬地折腾，那是大运要来的前兆。
+
+**English Translation:** Falling into a pit and lying flat to wait for death is common. But scrambling desperately to climb out signals great fortune approaching.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第三十九术
+
+**原文：** 计其所有而不念所无者，斯为吉人之兆也。
+
+**白话解读：** 数数自己有的东西，别老惦记没有的。这样的人，就是有福的人。
+
+**English Translation:** Count what you have instead of mourning what you lack—this is the sign of a fortunate person.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第四十术
+
+**原文：** 灵若根，身若树，运若叶。叶虽凋落，苟灵不死、身不枯，逢其时，终见枝繁叶茂。
+
+**白话解读：** 灵是根，身体是树干，气运是树叶。根烂了，树干空了，春天浇再多水也憋不出半片叶子。只要根还在，树干结实，时机一到，气运自然回来。
+
+**English Translation:** Spirit is the root, body is the trunk, fortune is the leaves. When leaves fall, if the root survives and the trunk holds, spring will bring lush foliage again.
+
+**Category:** 处世哲学 (Worldly Wisdom)
+
+---
+
+## 易命第四十一术（其一）
+
+**原文：** 豁尽所有乃制胜之枢，面厚如革实为初基。事成则万口争颂，功败则形迹俱冥。故无须怀讥诮之虞于方寸，洞明此理者，天岂肯薄待之？昔有破釜沉舟之志，而世惟传奏凯之歌，谁见折戟沉沙之迹？诚能心无滞碍，行不疑迟，既悟玄机，气运自随。
+
+**白话解读：** 豁出去，是赢的关键。脸皮厚，是起步的门槛。赢了，所有人都夸你英明。输了，没人记得你是谁。所以根本不用怕人笑话。想通这层的人，老天爷不会亏待他。项羽砸了锅沉了船，后人只记得他赢了那一仗有多痛快。可同样情况的其他人呢？谁提起过？没人提。心里没有拧巴，手上没有犹豫。悟透了，运气自然就来了。
+
+**English Translation:** Going all-in is the key to victory; thick-skinnedness is the starting point. Success brings praise, failure erases memory. Don't fear mockery. Those who understand this won't be mistreated by heaven. Only Xiang Yu's triumphant battles are remembered, not his fallen soldiers. Act without hesitation once you grasp the truth, and fortune follows.
+
+**Category:** 做事智慧 (Timing & Action)
+
+---
+
+## 易命第四十一术（其二）
+
+**原文：** 逐成者，众庶之所趋；务修者，达人之所怀。怀修之人，是谓成矣。
+
+**白话解读：** 追求成就，谁都在干。致力于修养，通达的人才看重。心怀修养的人，这才叫真正的成就。
+
+**English Translation:** Everyone chases success, but only the wise pursue self-cultivation. Those who embrace growth have achieved true accomplishment.
+
+**Category:** 做事智慧 (Timing & Action)
