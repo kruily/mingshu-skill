@@ -188,7 +188,7 @@
 让你的 Agent 自动安装，只需要说：
 
 ```
-请帮我安装命书 skill：https://github.com/kruily/ming-shu
+请帮我安装命书 skill：https://github.com/kruily/mingshu-skill/blob/main/INSTALL.md
 ```
 
 安装完成后，输入 `/ming-shu` 或说"每日一术"开始使用。

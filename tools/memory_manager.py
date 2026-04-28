@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """
 Memory Manager for ming-shu skill.
-Handles user memory storage for conversation history and bookmarked techniques.
-Data stored in local JSON files - one per user.
+Handles memory storage for conversation history and bookmarked techniques.
+Data stored in {skill_dir}/data/memory.json (single-user, skill directory based)
 """
 
 import json
-import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -14,7 +13,7 @@ from typing import Optional
 
 
 class UserMemory:
-    """Handles read/write operations for user memory storage."""
+    """Handles read/write operations for memory storage (single-user)."""
 
     def __init__(self, data_dir: Optional[str] = None):
         """
@@ -22,204 +21,134 @@ class UserMemory:
 
         Args:
             data_dir: Directory for storing memory files.
-                     Defaults to ~/.ming-shu-memory/ or ./memory/ for portability.
+                     Defaults to {skill_dir}/data/
         """
         if data_dir:
             self.data_dir = Path(data_dir)
         else:
-            # Try ~/.ming-shu-memory/ first, fall back to ./memory/
-            home_dir = Path.home()
-            default_dir = home_dir / ".ming-shu-memory"
-            if home_dir.exists() and os.access(home_dir, os.W_OK):
-                self.data_dir = default_dir
-            else:
-                self.data_dir = Path("./memory/")
+            # Use skill directory based storage
+            skill_dir = Path(__file__).parent.parent
+            self.data_dir = skill_dir / "data"
 
         self.data_dir.mkdir(parents=True, exist_ok=True)
+        self.data_file = self.data_dir / "memory.jsonl"
 
-    def _get_user_file(self, user_id: str) -> Path:
-        """Get the file path for a user's data."""
-        # Sanitize user_id to prevent path traversal
-        import re
-        if not re.match(r'^[a-zA-Z0-9_-]+$', user_id):
-            raise ValueError(f"Invalid user_id: {user_id}")
-        return self.data_dir / f"{user_id}.json"
+    def _load_all_records(self) -> list:
+        records = []
+        if self.data_file.exists():
+            with open(self.data_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        records.append(json.loads(line))
+        return records
 
-    def _load_user_data(self, user_id: str) -> dict:
-        """Load user data from JSON file, returns empty structure if not found."""
-        user_file = self._get_user_file(user_id)
-        if user_file.exists():
-            with open(user_file, "r", encoding="utf-8") as f:
-                return json.load(f)
+    def _load_data(self) -> dict:
+        records = self._load_all_records()
+        conversations = [r for r in records if r.get("type") == "conversation"]
+        bookmarks = [r for r in records if r.get("type") == "bookmark"]
         return {
-            "user_id": user_id,
             "created_at": datetime.utcnow().isoformat(),
             "updated_at": datetime.utcnow().isoformat(),
-            "conversations": [],
-            "bookmarks": []
+            "conversations": conversations,
+            "bookmarks": bookmarks
         }
 
-    def _save_user_data(self, user_id: str, data: dict) -> None:
-        """Save user data to JSON file."""
-        data["updated_at"] = datetime.utcnow().isoformat()
-        user_file = self._get_user_file(user_id)
-        with open(user_file, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+    def _save_data(self, data: dict) -> None:
+        pass
 
-    def save_conversation(self, user_id: str, difficulty: str,
+    def save_conversation(self, difficulty: str,
                           matched_techniques: list, bookmarked: bool = False) -> dict:
-        """
-        Save a conversation entry for a user.
-
-        Args:
-            user_id: Unique user identifier.
-            difficulty: Difficulty level of the conversation.
-            matched_techniques: List of technique IDs matched.
-            bookmarked: Whether this conversation is bookmarked.
-
-        Returns:
-            The saved conversation entry.
-        """
-        data = self._load_user_data(user_id)
-
         conversation_entry = {
+            "type": "conversation",
             "timestamp": datetime.utcnow().isoformat(),
             "difficulty": difficulty,
             "matched_techniques": matched_techniques,
             "bookmarked": bookmarked
         }
 
-        data["conversations"].append(conversation_entry)
-        self._save_user_data(user_id, data)
+        with open(self.data_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(conversation_entry, ensure_ascii=False) + "\n")
 
         return conversation_entry
 
-    def load_conversation(self, user_id: str) -> dict:
+    def load_conversation(self) -> dict:
         """
-        Load all conversation data for a user.
-
-        Args:
-            user_id: Unique user identifier.
+        Load all conversation data.
 
         Returns:
-            User data dict with conversations and bookmarks.
+            Data dict with conversations and bookmarks.
         """
-        return self._load_user_data(user_id)
+        return self._load_data()
 
-    def add_bookmark(self, user_id: str, technique_id: str, note: str = "") -> dict:
-        """
-        Add a bookmark for a technique.
-
-        Args:
-            user_id: Unique user identifier.
-            technique_id: ID of the technique to bookmark.
-            note: Optional note about the bookmark.
-
-        Returns:
-            The saved bookmark entry.
-        """
-        data = self._load_user_data(user_id)
-
-        # Check if technique already bookmarked
-        for bookmark in data["bookmarks"]:
-            if bookmark["technique_id"] == technique_id:
-                bookmark["note"] = note
-                self._save_user_data(user_id, data)
-                return bookmark
-
+    def add_bookmark(self, technique_id: str, note: str = "") -> dict:
         bookmark_entry = {
+            "type": "bookmark",
             "technique_id": technique_id,
             "bookmarked_at": datetime.utcnow().isoformat(),
             "note": note
         }
 
-        data["bookmarks"].append(bookmark_entry)
-        self._save_user_data(user_id, data)
+        with open(self.data_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(bookmark_entry, ensure_ascii=False) + "\n")
 
         return bookmark_entry
 
-    def get_bookmarks(self, user_id: str) -> list:
+    def get_bookmarks(self) -> list:
         """
-        Get all bookmarks for a user.
-
-        Args:
-            user_id: Unique user identifier.
+        Get all bookmarks.
 
         Returns:
             List of bookmark entries.
         """
-        data = self._load_user_data(user_id)
+        data = self._load_data()
         return data.get("bookmarks", [])
-
-    def list_users(self) -> list:
-        """
-        List all users with memory files.
-
-        Returns:
-            List of user IDs.
-        """
-        users = []
-        if self.data_dir.exists():
-            for file in self.data_dir.iterdir():
-                if file.suffix == ".json" and file.is_file():
-                    users.append(file.stem)
-        return sorted(users)
 
 
 def main():
-    """CLI interface for memory manager."""
+    """CLI interface for memory manager (single-user)."""
     if len(sys.argv) < 2:
         print("Usage:")
-        print("  python3 memory_manager.py write <user_id> <json_data>")
-        print("  python3 memory_manager.py read <user_id>")
-        print("  python3 memory_manager.py bookmark <user_id> <technique_id> [note]")
-        print("  python3 memory_manager.py list")
+        print("  python3 memory_manager.py write <json_data>")
+        print("  python3 memory_manager.py read")
+        print("  python3 memory_manager.py bookmark <technique_id> [note]")
+        print("  python3 memory_manager.py bookmarks")
         sys.exit(1)
 
     memory = UserMemory()
     command = sys.argv[1]
 
-    if command == "list":
-        users = memory.list_users()
-        if users:
-            print("Users:", ", ".join(users))
-        else:
-            print("No users found.")
-        sys.exit(0)
-
-    if len(sys.argv) < 3:
-        print("Error: Missing required arguments")
-        sys.exit(1)
-
-    user_id = sys.argv[2]
-
     if command == "write":
-        if len(sys.argv) < 4:
+        if len(sys.argv) < 3:
             print("Error: Missing JSON data")
             sys.exit(1)
         try:
-            json_data = json.loads(sys.argv[3])
+            json_data = json.loads(sys.argv[2])
             difficulty = json_data.get("difficulty", "unknown")
             matched_techniques = json_data.get("matched_techniques", [])
             bookmarked = json_data.get("bookmarked", False)
-            result = memory.save_conversation(user_id, difficulty, matched_techniques, bookmarked)
+            result = memory.save_conversation(difficulty, matched_techniques, bookmarked)
             print(f"Conversation saved: {result}")
         except json.JSONDecodeError as e:
             print(f"Error: Invalid JSON - {e}")
             sys.exit(1)
 
     elif command == "read":
-        data = memory.load_conversation(user_id)
+        data = memory.load_conversation()
         print(json.dumps(data, indent=2, ensure_ascii=False))
 
     elif command == "bookmark":
-        if len(sys.argv) < 4:
+        if len(sys.argv) < 3:
             print("Error: Missing technique_id")
             sys.exit(1)
-        technique_id = sys.argv[3]
-        note = sys.argv[4] if len(sys.argv) > 4 else ""
-        result = memory.add_bookmark(user_id, technique_id, note)
+        technique_id = sys.argv[2]
+        note = sys.argv[3] if len(sys.argv) > 3 else ""
+        result = memory.add_bookmark(technique_id, note)
         print(f"Bookmark added: {result}")
+
+    elif command == "bookmarks":
+        bookmarks = memory.get_bookmarks()
+        print(json.dumps(bookmarks, indent=2, ensure_ascii=False))
 
     else:
         print(f"Error: Unknown command '{command}'")

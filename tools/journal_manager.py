@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Journal Manager for Ming Shu - Manages journal entries, statistics, and insights.
-Stores data in ~/.ming-shu/journals/{user_id}.json
+Stores data in {skill_dir}/data/journal.json (single-user, skill directory based)
 """
 
 import json
@@ -11,48 +11,43 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Optional
 
-JOURNAL_DIR = Path.home() / ".ming-shu" / "journals"
+# Skill directory based storage (single user)
+SKILL_DIR = Path(__file__).parent.parent
+DATA_DIR = SKILL_DIR / "data"
+JOURNAL_FILE = DATA_DIR / "journal.jsonl"
 
 
 class JournalManager:
 
-    def __init__(self, journal_dir: Optional[Path] = None):
-        self.journal_dir = Path(journal_dir) if journal_dir else JOURNAL_DIR
-        self.journal_dir.mkdir(parents=True, exist_ok=True)
+    def __init__(self, data_dir: Optional[Path] = None):
+        self.data_dir = Path(data_dir) if data_dir else DATA_DIR
+        self.data_dir.mkdir(parents=True, exist_ok=True)
+        self.journal_file = self.data_dir / "journal.jsonl"
 
-    def _get_journal_path(self, user_id: str) -> Path:
-        return self.journal_dir / f"{user_id}.json"
+    def _load_entries(self) -> list:
+        entries = []
+        if self.journal_file.exists():
+            with open(self.journal_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        entries.append(json.loads(line))
+        return entries
 
-    def _load_journal(self, user_id: str) -> dict:
-        path = self._get_journal_path(user_id)
-        if path.exists():
-            with open(path, "r", encoding="utf-8") as f:
-                return json.load(f)
-        return {
-            "user_id": user_id,
-            "journal": [],
-            "stats": {},
-            "insights": []
-        }
-
-    def _save_journal(self, user_id: str, data: dict) -> None:
-        path = self._get_journal_path(user_id)
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+    def _get_next_id(self) -> int:
+        entries = self._load_entries()
+        return len(entries) + 1
 
     def add_entry(
         self,
-        user_id: str,
         situation: str,
         techniques: str,
         effectiveness: int,
         tags: Optional[list] = None,
         notes: Optional[str] = None
     ) -> dict:
-        data = self._load_journal(user_id)
-
         entry = {
-            "id": len(data["journal"]) + 1,
+            "id": self._get_next_id(),
             "timestamp": datetime.now().isoformat(),
             "situation": situation,
             "techniques": techniques,
@@ -61,18 +56,17 @@ class JournalManager:
             "notes": notes
         }
 
-        data["journal"].append(entry)
-        self._save_journal(user_id, data)
+        with open(self.journal_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+
         return entry
 
-    def get_entries(self, user_id: str, limit: int = 10) -> list:
-        data = self._load_journal(user_id)
-        entries = data.get("journal", [])
+    def get_entries(self, limit: int = 10) -> list:
+        entries = self._load_entries()
         return entries[-limit:] if limit > 0 else entries
 
-    def get_stats(self, user_id: str) -> dict:
-        data = self._load_journal(user_id)
-        journal = data.get("journal", [])
+    def get_stats(self) -> dict:
+        journal = self._load_entries()
 
         if not journal:
             return {
@@ -125,9 +119,6 @@ class JournalManager:
             "situation_distribution": situation_dist
         }
 
-        data["stats"] = stats
-        self._save_journal(user_id, data)
-
         return stats
 
     def _calculate_streaks(self, unique_dates: list) -> tuple:
@@ -166,23 +157,22 @@ class JournalManager:
 
         return current_streak, best_streak
 
-    def get_streak(self, user_id: str) -> dict:
-        stats = self.get_stats(user_id)
+    def get_streak(self) -> dict:
+        stats = self.get_stats()
         return {
             "current_streak": stats.get("current_streak", 0),
             "best_streak": stats.get("best_streak", 0),
             "total_days": stats.get("total_days_practiced", 0)
         }
 
-    def generate_insights(self, user_id: str) -> list:
-        data = self._load_journal(user_id)
-        journal = data.get("journal", [])
+    def generate_insights(self) -> list:
+        journal = self._load_entries()
 
         if len(journal) < 3:
             return ["记录太少，无法生成有意义的洞察。继续记录以获取个性化建议。"]
 
         insights = []
-        stats = self.get_stats(user_id)
+        stats = self.get_stats()
 
         techniques_by_situation = defaultdict(list)
         for entry in journal:
@@ -229,22 +219,19 @@ class JournalManager:
             if top_tags:
                 insights.append(f"你最关注的领域是：{', '.join(top_tags)}")
 
-        data["insights"] = insights
-        self._save_journal(user_id, data)
-
         return insights
 
-    def get_ai_feedback(self, user_id: str) -> str:
-        stats = self.get_stats(user_id)
-        insights = self.generate_insights(user_id)
+    def get_ai_feedback(self) -> str:
+        stats = self.get_stats()
+        insights = self.generate_insights()
 
         if stats["total_entries"] == 0:
             return (
                 "欢迎开始你的命书之旅！"
                 "记录你第一次使用易命术的情境，我会根据你的实践提供个性化反馈。\n"
                 "使用示例：\n"
-                "  python3 tools/journal_manager.py add --user 你ID --situation \"工作汇报\" "
-                "--techniques \"第五术\" --effectiveness 4"
+                '  python3 tools/journal_manager.py add --situation "工作汇报" '
+                '--techniques "第五术" --effectiveness 4'
             )
 
         feedback_parts = []
@@ -305,7 +292,6 @@ def main():
     subparsers = parser.add_subparsers(dest="command", help="可用命令")
 
     add_parser = subparsers.add_parser("add", help="添加新记录")
-    add_parser.add_argument("--user", required=True, help="用户ID")
     add_parser.add_argument("--situation", required=True, help="情境描述")
     add_parser.add_argument("--techniques", required=True, help="使用的技术")
     add_parser.add_argument("--effectiveness", type=int, required=True,
@@ -314,20 +300,15 @@ def main():
     add_parser.add_argument("--notes", help="备注", default="")
 
     list_parser = subparsers.add_parser("list", help="查看记录")
-    list_parser.add_argument("--user", required=True, help="用户ID")
     list_parser.add_argument("--limit", type=int, default=10, help="显示数量")
 
     stats_parser = subparsers.add_parser("stats", help="查看统计")
-    stats_parser.add_argument("--user", required=True, help="用户ID")
 
     streak_parser = subparsers.add_parser("streak", help="查看连续天数")
-    streak_parser.add_argument("--user", required=True, help="用户ID")
 
     feedback_parser = subparsers.add_parser("feedback", help="获取AI反馈")
-    feedback_parser.add_argument("--user", required=True, help="用户ID")
 
     insights_parser = subparsers.add_parser("insights", help="查看洞察")
-    insights_parser.add_argument("--user", required=True, help="用户ID")
 
     args = parser.parse_args()
 
@@ -340,7 +321,6 @@ def main():
     if args.command == "add":
         tags = [t.strip() for t in args.tags.split(",") if t.strip()]
         entry = manager.add_entry(
-            user_id=args.user,
             situation=args.situation,
             techniques=args.techniques,
             effectiveness=args.effectiveness,
@@ -354,7 +334,7 @@ def main():
         print(f"   效果: {entry['effectiveness']}/5")
 
     elif args.command == "list":
-        entries = manager.get_entries(args.user, args.limit)
+        entries = manager.get_entries(args.limit)
         if not entries:
             print("暂无记录")
             return
@@ -368,7 +348,7 @@ def main():
             print()
 
     elif args.command == "stats":
-        stats = manager.get_stats(args.user)
+        stats = manager.get_stats()
         print("📊 统计数据：\n")
         print(f"  总记录数: {stats['total_entries']}")
         print(f"  练习天数: {stats['total_days_practiced']}")
@@ -387,19 +367,19 @@ def main():
                 print(f"    - {tag}: {count}次")
 
     elif args.command == "streak":
-        streak = manager.get_streak(args.user)
+        streak = manager.get_streak()
         print("🔥 连续练习统计：\n")
         print(f"  当前连续: {streak['current_streak']}天")
         print(f"  最佳连续: {streak['best_streak']}天")
         print(f"  总天数: {streak['total_days']}天")
 
     elif args.command == "feedback":
-        feedback = manager.get_ai_feedback(args.user)
+        feedback = manager.get_ai_feedback()
         print("💬 AI反馈：\n")
         print(feedback)
 
     elif args.command == "insights":
-        insights = manager.generate_insights(args.user)
+        insights = manager.generate_insights()
         print("💡 个性化洞察：\n")
         for insight in insights:
             print(f"  • {insight}")

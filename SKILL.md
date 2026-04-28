@@ -1,7 +1,8 @@
 ---
 name: ming-shu
 description: |
-  命书智慧指引 - 基于《改运奇书》中的41条易命术，帮助用户应对人生困境、识人分析、关系诊断、决策建议等。支持：困境咨询、每日一术、识人术(分析一个人)、言语分析、婚恋关系、贵人识别、社交分层、时机把握、合作之道、财富管理。用户说"帮我看看他"、"分析他这人怎么样"、"判断一个人"时触发识人功能。
+  命书智慧指引 - 基于《改运奇书》中的41条易命术，帮助用户应对人生困境、识人分析、关系诊断、决策建议、命书修行等。支持：困境咨询、每日一术、识人术(分析一个人)、言语分析、婚恋关系、贵人识别、社交分层、时机把握、合作之道、财富管理。用户说"帮我看看他"、"分析他这人怎么样"、"判断一个人"时触发识人功能。
+   当用户输入“打卡”、“每日修行”时触发命书修行模式。
 version: "1.0.0"
 allowed-tools:
   - Read
@@ -27,6 +28,7 @@ user-invocable: true
 - `/ming-shu` - 随机返回一条易命术
 - `命书` - 随机返回一条易命术
 - `每日一术` - 随机返回一条易命术
+- `打卡｜每日修行` - 进入命书修行模式
 
 ### 意图判断
 
@@ -254,21 +256,57 @@ user-invocable: true
 当用户说"打卡"、"今日修行"、"记录"时激活日记功能：
 
 #### 打卡流程
-1. 询问今日情境："今天发生了什么？"
-2. 询问应用的术："你应用了哪条命书智慧？"
-3. 询问效果评分（1-5分）
-4. 询问感悟："有什么心得想记录？"
-5. 提供AI反馈
+
+> ⚠️ **Tool调用要求** - 以下步骤必须按顺序执行，不可用文字模拟替代
+
+1. **调用journal_intake prompt** - 加载并使用 `prompts/journal_intake.md` 模板收集信息
+2. **收集完毕后执行CLI** - 用户确认信息后，立即执行：
+   ```bash
+   python3 tools/journal_manager.py add \
+     --situation "{situation}" \
+     --techniques "{techniques}" \
+     --effectiveness {score}
+   ```
+3. **生成AI反馈** - 执行：
+   ```bash
+   python3 tools/journal_manager.py feedback
+   ```
+   并将输出作为AI反馈回复给用户
+
+**⚠️ 重要提醒：**
+- 显示"连续X天"时，必须使用 `streak` 或 `stats` 命令返回的真实数据
+- 不要自行计算天数，不要基于"第几次打卡"来估算
+- 例如：同一天打两次卡，连续天数仍是1天，不是2天
+
+**数据存储位置：** `{skill_dir}/data/journal.jsonl`
 
 #### 命令
-- `打卡` / `今日修行` - 开始打卡
-- `我的统计` / `打卡记录` - 查看统计
-- `AI分析` / `给我的建议` - 获取AI反馈
-- `我的连续天数` - 查看连续打卡天数
+
+> ⚠️ **每次命令必须触发对应的CLI tool调用**
+
+- `打卡` / `今日修行` → 调用 `journal_manager.py add`
+- `我的统计` / `打卡记录` → 调用 `journal_manager.py stats`
+- `AI分析` / `给我的建议` → 调用 `journal_manager.py feedback`
+- `我的连续天数` → 调用 `journal_manager.py streak`
+
+**示例CLI调用：**
+```bash
+# 打卡
+python3 tools/journal_manager.py add --situation "今天面试" --techniques "第五术" --effectiveness 4
+
+# 查看统计
+python3 tools/journal_manager.py stats
+
+# 获取AI反馈
+python3 tools/journal_manager.py feedback
+
+# 查看连续天数
+python3 tools/journal_manager.py streak
+```
 
 #### 数据存储
 使用 `tools/journal_manager.py`:
-- 数据位置: `~/.ming-shu/journals/{user_id}.json`
+- 数据位置: `{skill_dir}/data/journal.jsonl`
 - 追踪: 打卡次数、连续天数、应用的技术、效果评分
 
 ---
@@ -461,45 +499,30 @@ user-invocable: true
 | 工具文件 | 用途 | 使用时机 | 命令示例 |
 |---------|------|---------|---------|
 | `memory_manager.py` | 用户记忆、书签 | 困境咨询全程 | `UserMemory.save_conversation()` |
-| `journal_manager.py` | 日记打卡、统计 | 用户说"打卡"时 | `journal_manager.py add --user xxx` |
+| `journal_manager.py` | 日记打卡、统计 | 用户说"打卡"时 | `journal_manager.py add --situation "..." --techniques "..." --effectiveness N` |
 | `reminder_scheduler.py` | 定时提醒设置 | 用户想设置提醒时 | `reminder_scheduler.py schedule --user xxx` |
 | `memory_sync.py` | 记忆同步Hermes/OpenClaw | 需要跨平台同步时 | `memory_sync.py sync --user xxx` |
 
 ### 使用流程
 
+> ⚠️ **强制执行** - 以下tool调用不可跳过，不可文字模拟
+
 ```
-用户输入
+用户输入"打卡"
     ↓
-intake.md 判断意图
+使用 prompts/journal_intake.md 收集信息
     ↓
-┌─────────────────────────────────────────────┐
-│ 困境咨询流程中                               │
-│                                             │
-│ memory_manager.py                            │
-│   - save_conversation() 保存对话             │
-│   - load_conversation() 加载历史             │
-│   - add_bookmark() 添加书签                  │
-└─────────────────────────────────────────────┘
+【必须执行】python3 tools/journal_manager.py add --situation "..." --techniques "..." --effectiveness N
     ↓
-┌─────────────────────────────────────────────┐
-│ 用户说"打卡"时                              │
-│                                             │
-│ journal_manager.py                           │
-│   - add() 添加打卡记录                       │
-│   - stats() 查看统计                         │
-│   - streak() 查看连续天数                    │
-│   - feedback() 获取AI反馈                    │
-└─────────────────────────────────────────────┘
+【必须执行】python3 tools/journal_manager.py feedback
     ↓
-┌─────────────────────────────────────────────┐
-│ 用户想设置提醒时                             │
-│                                             │
-│ reminder_scheduler.py                       │
-│   - schedule() 设置提醒                      │
-│   - list() 列出提醒                          │
-│   - send-now() 测试发送                      │
-└─────────────────────────────────────────────┘
+将feedback结果返回给用户
 ```
+
+**其他工具调用：**
+- 困境咨询全程：`memory_manager.py` (save_conversation/load_conversation/add_bookmark)
+- 设置提醒时：`reminder_scheduler.py` (schedule/list/send-now)
+- 跨平台同步：`memory_sync.py` (sync/search)
 
 ### 具体使用示例
 
@@ -512,13 +535,13 @@ memory.save_conversation(user_id, difficulty, matched_techniques, bookmarked=Fal
 
 **场景2：用户说"打卡"**
 ```bash
-python3 tools/journal_manager.py add --user alice --situation "今天面试" --techniques "第五术" --mood "平静"
-python3 tools/journal_manager.py stats --user alice
+python3 tools/journal_manager.py add --situation "今天面试" --techniques "第五术" --mood "平静"
+python3 tools/journal_manager.py stats
 ```
 
 **场景3：查看连续天数**
 ```bash
-python3 tools/journal_manager.py streak --user alice
+python3 tools/journal_manager.py streak
 ```
 
 **场景4：设置早安提醒**

@@ -7,7 +7,7 @@
 将以下内容粘贴给你的 Agent：
 
 ```
-请帮我安装命书 skill：https://github.com/kruily/ming-shu
+请帮我安装命书 skill：https://github.com/kruily/mingshu-skill/blob/main/INSTALL.md
 
 安装完成后，输入 /ming-shu 或"每日一术"开始使用。
 ```
