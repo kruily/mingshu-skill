@@ -5,7 +5,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 [![AgentSkills Compatible](https://img.shields.io/badge/AgentSkills-Compatible-green.svg)](https://github.com/kruily/ming-shu)
-![Stars](https://img.shields.io/github/stars/kruily/ming-shu?style=social)
+![Stars](https://img.shields.io/github/stars/kruily/mingshu-skill?style=social)
 
 **基于番茄《改运奇书》中的"命书"，助你应对人生困境**
 
@@ -74,25 +74,23 @@
 让你的 Agent 自动安装，只需要说：
 
 ```
-请帮我安装命书 skill：https://github.com/kruily/ming-shu
+请帮我安装命书 skill：https://github.com/kruily/mingshu-skill/blob/main/INSTALL.md
 
 安装完成后，输入 /ming-shu 或"每日一术"开始使用。
 ```
 
 ### 手动安装
 
+详细安装说明请查看 [INSTALL.md](INSTALL.md)
+
+快速示例：
 ```bash
 git clone https://github.com/kruily/ming-shu ~/.claude/skills/ming-shu
 ```
 
-### 安装到不同平台
+### 各平台安装
 
-| 平台        | 安装命令                              |
-| ----------- | ------------------------------------- |
-| Hermes      | `hermes skills add ming-shu`          |
-| OpenClaw    | `npx clawhub@latest install ming-shu` |
-| Claude Code | 克隆到 `~/.claude/skills/`            |
-| Codex       | 克隆到 `~/.codex/skills/`             |
+详细安装说明（各平台完整命令）请查看 [INSTALL.md](INSTALL.md)
 
 ---
 
