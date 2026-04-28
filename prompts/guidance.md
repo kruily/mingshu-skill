@@ -8,6 +8,15 @@ Generate follow-up questions that deepen understanding, prompt self-discovery, a
 
 ---
 
+## 苏格拉底式引导
+
+当用户描述困境时，可使用五阶段流程进行引导（参考 `prompts/socratic_guidance.md`）：
+1. **理解确认** → 2. **探索情境** → 3. **命书连接** → 4. **行动实验** → 5. **承诺跟进**
+
+此流程与本文件的四类问题互补，可根据情况选择使用。
+
+---
+
 ## When to Guide vs. Give Direct Advice
 
 | Situation | Approach |
@@ -31,6 +40,8 @@ Generate follow-up questions that deepen understanding, prompt self-discovery, a
 
 **Purpose:** Ensure you understand the user's situation correctly and surface details they may have overlooked.
 
+**Socratic Stage:** 对应「理解确认」阶段 — 确认你正确理解了用户的处境。
+
 **Characteristics:**
 - Start with "Can you describe...", "What does... feel like", "When you say..."
 - Seek specificity and concrete details
@@ -52,6 +63,8 @@ Generate follow-up questions that deepen understanding, prompt self-discovery, a
 ### 2. Reflective Questions (反思提问)
 
 **Purpose:** Help users notice patterns, connect experiences, and arrive at insights themselves.
+
+**Socratic Stage:** 对应「探索情境」阶段 — 帮助用户探索其处境中的模式与联系。
 
 **Characteristics:**
 - Point to something the user already knows but hasn't articulated
@@ -75,6 +88,8 @@ Generate follow-up questions that deepen understanding, prompt self-discovery, a
 
 **Purpose:** Examine assumptions, break limiting beliefs, and expand the user's frame of reference.
 
+**Socratic Stage:** 对应「命书连接」阶段 — 借助命书智慧挑战用户的假设。
+
 **Characteristics:**
 - Gently question what the user takes as given
 - Present alternative perspectives they haven't considered
@@ -96,6 +111,8 @@ Generate follow-up questions that deepen understanding, prompt self-discovery, a
 ### 4. Action-Oriented Questions (行动提问)
 
 **Purpose:** Move from understanding to experimentation and concrete next steps.
+
+**Socratic Stage:** 对应「行动实验」与「承诺跟进」阶段 — 推动用户将洞察转化为具体行动。
 
 **Characteristics:**
 - Focus on what they will do, not what they should think
@@ -217,6 +234,19 @@ User: "顺的时候比较放松，断开的时候好像不自觉地在'推'。"
 - [ ] Already contains the answer ("Have you tried relaxing?")
 - [ ] Feels like a test or interrogation
 - [ ] Doesn't connect to their stated concern
+
+---
+
+## Transitioning to 命书 Recommendation
+
+After guided questions lead to user insight, smoothly transition to classical wisdom:
+
+**Transition Phrases:**
+- "根据你刚才的发现，命书中有一术或许能帮你..."
+- "你说的这个问题，让我想到易命第X术..."
+- "结合你的情况，我们来看看古人如何面对类似的困境..."
+
+**Flow:** 引导提问 → 用户自悟 → 命书解读 → 行动生成
 
 ---
 
