@@ -275,18 +275,35 @@ user-invocable: true
 
 ## 延伸功能 | Extended Features
 
-命书不只是困境咨询，还有8大实用功能。当用户输入涉及以下任意关键词时，自动路由到对应功能：
+**这些功能是困境咨询的补充，不是独立入口。**
 
-| 功能 | 触发关键词 | 说明 | 交互形式 |
-|------|-----------|------|---------|
-| **识人术** | "看人"、"分析他"、"这人怎么样"、"帮我看看他"、"识人"、"判断一个人" | 通过观察判断一个人的人品、可信度、相处建议 | 对话式 |
-| **言语分析** | "怎么说"、"这样说话好不好"、"这样合适吗"、"怎么表达" | 言语是否合乎命书智慧，如何改善表达 | 对话式 |
-| **婚恋关系** | "夫妻"、"恋人"、"对象"、"感情问题"、"吵架"、"婚姻" | 亲密关系分析，信任/沟通/相处建议 | **自适应** |
-| **贵人识别** | "我的贵人"、"人脉"、"谁能帮我"、"遇到贵人" | 识别身边的贵人，维护人脉边界 | 对话式 |
-| **社交分层** | "朋友"、"社交"、"圈子"、"三教九流" | 分析社交圈结构，识别三类人 | **自适应** |
-| **时机把握** | "该不该"、"机会"、"选择"、"能不能"、"要不要" | 判断行动时机，分析利弊 | 对话式 |
-| **合作之道** | "合作"、"合伙"、"搭档"、"团队" | 合作前评估，如何与人共事 | 对话式 |
-| **财富管理** | "钱"、"投资"、"理财"、"炒股"、"财务" | 财务决策分析，投资风险提示 | **自适应** |
+在完成困境咨询后，可以根据用户情况推荐相关延伸功能：
+
+| 功能 | 什么时候用 | 基于术 |
+|------|-----------|--------|
+| **识人术** | 困境涉及"分析一个人"时 | 第9、13、14、19术 |
+| **言语分析** | 困境涉及"怎么说"时 | 第3、12术 |
+| **婚恋关系** | 困境涉及"伴侣/感情"时 | 第22、30术 |
+| **贵人识别** | 困境涉及"人脉/贵人"时 | 第10、23术 |
+| **社交分层** | 困境涉及"社交圈"时 | 第16、21术 |
+| **时机把握** | 困境涉及"该不该/选择"时 | 第6、15、17、35、38、41术 |
+| **合作之道** | 困境涉及"合作/合伙"时 | 第14、18术 |
+| **财富管理** | 困境涉及"钱/投资"时 | 第4、25-27、31-34术 |
+
+### 触发原则
+
+1. **优先困境咨询**：用户描述困境时，先走困境咨询流程
+2. **延伸推荐**：困境咨询完成后，根据情况推荐相关功能
+3. **明确请求**：用户明确说"帮我看人"时，直接路由到识人术
+
+### 延伸推荐话术
+
+在困境咨询完成后，可以根据用户情况推荐：
+
+```
+基于你的困境，命书[X术]提到了... 
+如果你想深入分析[方面]，我可以帮你使用命书的[功能名]工具。
+```
 
 ---
 
@@ -402,20 +419,119 @@ user-invocable: true
 
 ### Prompts文件对照表
 
-| Prompt文件 | 用途 | 何时使用 | 输入 |
+| Prompt文件 | 用途 | 触发时机 | 输入 |
 |-----------|------|---------|------|
-| `intake.md` | 收集用户困境 | 用户描述问题时 | 用户的问题描述 |
-| `analyzer.md` | 匹配命书技术 | 收集完困境后 | 用户困境描述 |
-| `interpreter.md` | 解读命书原文 | 匹配到技术后 | 技术编号 |
-| `action_generator.md` | 生成行动清单 | 解读完成后 | 技术内容 |
-| `guidance.md` | 引导提问 | 给出建议后 | 完整分析结果 |
-| `journal_intake.md` | 日记打卡收集 | 用户说"打卡"时 | 打卡信息 |
+| `intake.md` | 意图判断 + 困境收集 | 用户输入时，先判断意图 | 用户的原始输入 |
+| `analyzer.md` | 匹配命书技术 | intake判断为"困境咨询"后 | 用户困境描述 |
+| `interpreter.md` | 解读命书原文 | analyzer匹配到技术后 | 技术编号 |
+| `action_generator.md` | 生成行动清单 | interpreter解读完成后 | 技术内容 |
+| `guidance.md` | 引导提问 | action_generator完成后 | 完整分析结果 |
+| `journal_intake.md` | 日记打卡收集 | 用户说"打卡"/"今日修行" | 打卡信息 |
 | `journal_feedback.md` | AI分析反馈 | 打卡完成后 | 日记数据 |
-| `people_reading.md` | 识人分析 | 用户明确请求时 | 对人的观察描述 |
-| `relationship.md` | 婚恋分析 | 用户明确请求时 | 关系信息 |
-| `social_zoning.md` | 社交分析 | 用户明确请求时 | 社交信息 |
-| `wealth_management.md` | 财富分析 | 用户明确请求时 | 财务信息 |
-| `socratic_guidance.md` | 苏格拉底引导 | 需要深度引导时 | 困境描述 |
+| `people_reading.md` | 识人分析 | intake判断为"功能请求：识人"时 | 对人的观察描述 |
+| `relationship.md` | 婚恋分析 | intake判断为"功能请求：婚恋"时 | 关系信息 |
+| `social_zoning.md` | 社交分析 | intake判断为"功能请求：社交"时 | 社交信息 |
+| `wealth_management.md` | 财富分析 | intake判断为"功能请求：财富"时 | 财务信息 |
+| `socratic_guidance.md` | 苏格拉底引导 | 用户需要深度引导时 | 困境描述 |
+
+### 流程对应
+
+```
+意图判断 (intake.md)
+    │
+    ├── 困境咨询 ──→ analyzer.md ──→ interpreter.md ──→ action_generator.md ──→ guidance.md
+    │
+    ├── 功能请求：识人 ──→ people_reading.md
+    ├── 功能请求：婚恋 ──→ relationship.md
+    ├── 功能请求：社交 ──→ social_zoning.md
+    ├── 功能请求：财富 ──→ wealth_management.md
+    └── ... (其他功能按需调用)
+
+    ├── 每日一术 ──→ 直接从references/读取
+    │
+    └── 日记打卡 ──→ journal_intake.md ──→ journal_feedback.md
+```
+
+## Tools使用指南
+
+命书Skill包含Python工具，用于数据管理和系统集成。
+
+### Tools文件对照表
+
+| 工具文件 | 用途 | 使用时机 | 命令示例 |
+|---------|------|---------|---------|
+| `memory_manager.py` | 用户记忆、书签 | 困境咨询全程 | `UserMemory.save_conversation()` |
+| `journal_manager.py` | 日记打卡、统计 | 用户说"打卡"时 | `journal_manager.py add --user xxx` |
+| `reminder_scheduler.py` | 定时提醒设置 | 用户想设置提醒时 | `reminder_scheduler.py schedule --user xxx` |
+| `memory_sync.py` | 记忆同步Hermes/OpenClaw | 需要跨平台同步时 | `memory_sync.py sync --user xxx` |
+
+### 使用流程
+
+```
+用户输入
+    ↓
+intake.md 判断意图
+    ↓
+┌─────────────────────────────────────────────┐
+│ 困境咨询流程中                               │
+│                                             │
+│ memory_manager.py                            │
+│   - save_conversation() 保存对话             │
+│   - load_conversation() 加载历史             │
+│   - add_bookmark() 添加书签                  │
+└─────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────┐
+│ 用户说"打卡"时                              │
+│                                             │
+│ journal_manager.py                           │
+│   - add() 添加打卡记录                       │
+│   - stats() 查看统计                         │
+│   - streak() 查看连续天数                    │
+│   - feedback() 获取AI反馈                    │
+└─────────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────────┐
+│ 用户想设置提醒时                             │
+│                                             │
+│ reminder_scheduler.py                       │
+│   - schedule() 设置提醒                      │
+│   - list() 列出提醒                          │
+│   - send-now() 测试发送                      │
+└─────────────────────────────────────────────┘
+```
+
+### 具体使用示例
+
+**场景1：困境咨询中保存对话**
+```python
+from tools.memory_manager import UserMemory
+memory = UserMemory()
+memory.save_conversation(user_id, difficulty, matched_techniques, bookmarked=False)
+```
+
+**场景2：用户说"打卡"**
+```bash
+python3 tools/journal_manager.py add --user alice --situation "今天面试" --techniques "第五术" --mood "平静"
+python3 tools/journal_manager.py stats --user alice
+```
+
+**场景3：查看连续天数**
+```bash
+python3 tools/journal_manager.py streak --user alice
+```
+
+**场景4：设置早安提醒**
+```bash
+python3 tools/reminder_scheduler.py schedule --user alice --type morning
+python3 tools/reminder_scheduler.py list --user alice
+```
+
+**场景5：同步记忆到Hermes/OpenClaw**
+```bash
+python3 tools/memory_sync.py sync --user alice
+python3 tools/memory_sync.py search --query "焦虑"
+```
 
 ### 8大延伸功能
 
